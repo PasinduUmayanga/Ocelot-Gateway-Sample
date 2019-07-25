@@ -60,3 +60,15 @@ Or via the .NET Core CLI:
 `dotnet add package ocelot`
 
 All versions can be found [here](https://www.nuget.org/packages/Ocelot/)
+
+## Create Project
+
+01. First Create Project File->New->Project
+02. Select ASP>NET Core Web Aplication Named `Ocelot.Gateway`
+
+![Create Gate way Application](https://user-images.githubusercontent.com/21302583/61872479-0ed24480-af01-11e9-96c1-256cb81fcc17.PNG)
+
+03. Create Another Project Named `Ocelot.CustomerApi` On the soluation explore Right Click on Soluation->Right Click->Add->New Project
+
+![Create api Application](https://user-images.githubusercontent.com/21302583/61872775-cd8e6480-af01-11e9-97dc-bf4d3590529d.PNG)
+
