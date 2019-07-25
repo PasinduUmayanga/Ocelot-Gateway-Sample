@@ -49,6 +49,8 @@ Ocelot is an API Gateway for .NET platform. This project is intended for people 
 * Configuration/Administration REST API
 * Platform/Cloud Agnostic
 
+![0002_existing app](https://user-images.githubusercontent.com/21302583/61870106-e6474c00-aefa-11e9-8e65-9eb40ab924a9.png)
+
 ## How to install
 
 Install Ocelot and it's dependencies using NuGet. 
