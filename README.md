@@ -68,7 +68,16 @@ All versions can be found [here](https://www.nuget.org/packages/Ocelot/)
 
 ![Create Gate way Application](https://user-images.githubusercontent.com/21302583/61872479-0ed24480-af01-11e9-96c1-256cb81fcc17.PNG)
 
-03. Create Another Project Named `Ocelot.CustomerApi` On the soluation explore Right Click on Soluation->Right Click->Add->New Project
+03. Select Empty 
+
+![Create Application2](https://user-images.githubusercontent.com/21302583/61873196-fbc07400-af02-11e9-8624-790d870a7ebb.PNG)
+
+
+04. Create Another Project Named `Ocelot.CustomerApi` On the soluation explore Right Click on Soluation->Right Click->Add->New Project
 
 ![Create api Application](https://user-images.githubusercontent.com/21302583/61872775-cd8e6480-af01-11e9-97dc-bf4d3590529d.PNG)
+
+05. Select Api
+
+![Create api Application2](https://user-images.githubusercontent.com/21302583/61873338-5d80de00-af03-11e9-908f-4e0029b14deb.PNG)
 
