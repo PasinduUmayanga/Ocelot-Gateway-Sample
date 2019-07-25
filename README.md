@@ -81,3 +81,7 @@ All versions can be found [here](https://www.nuget.org/packages/Ocelot/)
 
 ![Create api Application2](https://user-images.githubusercontent.com/21302583/61873338-5d80de00-af03-11e9-908f-4e0029b14deb.PNG)
 
+06. Go to Tools->Nuget Package Manager->Manage Nuget Packages For Soluation and Install Ocelot
+
+![Install Nuget Ocelot](https://user-images.githubusercontent.com/21302583/61873448-a46ed380-af03-11e9-86c2-453b05dba384.PNG)
+
