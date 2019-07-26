@@ -85,3 +85,102 @@ All versions can be found [here](https://www.nuget.org/packages/Ocelot/)
 
 ![Install Nuget Ocelot](https://user-images.githubusercontent.com/21302583/61873448-a46ed380-af03-11e9-86c2-453b05dba384.PNG)
 
+07. Create JSON File Named `Ocelot.json` inside `Ocelot.Gateway` and Add Below Code
+
+```json
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:34775"
+  },
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/CustomerService/{catchAll}",
+      "DownstreamPathTemplate": "/api/{catchAll}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 35045
+        }
+      ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    }
+  ]
+}
+```
+
+08. Change `Program.cs` in Ocelot.Gateway As below
+
+```csharp
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        CreateWebHostBuilder(args).Build().Run();
+    }
+
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        WebHost.CreateDefaultBuilder(args).ConfigureAppConfiguration((hostingContext, config) =>
+        {
+            config
+                .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
+                .AddJsonFile("Ocelot.json", true, true)
+                .AddEnvironmentVariables();
+        })
+            .UseStartup<Startup>();
+}
+```
+
+09. Change `Startup.cs` in Ocelot.Gateway As below
+
+```csharp
+public class Startup
+{
+    // This method gets called by the runtime. Use this method to add services to the container.
+    // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
+
+    public IConfiguration Configuration { get; }
+
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.Configure<CookiePolicyOptions>(options =>
+        {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+            options.MinimumSameSitePolicy = SameSiteMode.None;
+        });
+        services.AddOcelot();
+        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+    }
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public async void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    {
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseExceptionHandler("/Error");
+        }
+        //app.Run(async (context) =>
+        //{
+        //    await context.Response.WriteAsync("Hello, World!");
+        //});
+        app.UseStaticFiles();
+        app.UseCookiePolicy();
+        await app.UseOcelot();
+        //app.UseMvc();
+    }
+}
+```
