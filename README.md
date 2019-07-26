@@ -110,6 +110,8 @@ All versions can be found [here](https://www.nuget.org/packages/Ocelot/)
   ]
 }
 ```
+>Here Port you can find from Ocelot.CustomerApi->Right Click->Properties
+![port](https://user-images.githubusercontent.com/21302583/61945564-eeb48b00-afbd-11e9-8a31-abd3c6d2578d.PNG)
 
 08. Change `Program.cs` in Ocelot.Gateway As below
 
@@ -154,8 +156,8 @@ public class Startup
     {
         services.Configure<CookiePolicyOptions>(options =>
         {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+            // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+            options.CheckConsentNeeded = context => true;
             options.MinimumSameSitePolicy = SameSiteMode.None;
         });
         services.AddOcelot();
@@ -183,4 +185,5 @@ public class Startup
         //app.UseMvc();
     }
 }
+
 ```
