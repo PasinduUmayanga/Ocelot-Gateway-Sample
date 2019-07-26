@@ -64,7 +64,7 @@ All versions can be found [here](https://www.nuget.org/packages/Ocelot/)
 ## Create Project
 
 01. First Create Project File->New->Project
-02. Select ASP>NET Core Web Aplication Named `Ocelot.Gateway`
+02. Select ASP.NET Core Web Aplication Named `Ocelot.Gateway`
 
 ![Create Gate way Application](https://user-images.githubusercontent.com/21302583/61872479-0ed24480-af01-11e9-96c1-256cb81fcc17.PNG)
 
