@@ -187,3 +187,13 @@ public class Startup
 }
 
 ```
+
+10. Right Click On the Soluation->Set StartUp Projects
+
+![multiple select](https://user-images.githubusercontent.com/21302583/61947196-3a693380-afc2-11e9-8c2c-c8b9e6f5892a.PNG)
+
+11. Now Start Project 
+
+This is Gateway URL [http://localhost:34775/](http://localhost:34775/ "Gate Way URL") Change this to [http://localhost:34775/CustomerService/values](http://localhost:34775/CustomerService/values "Gate Way URL")->Enter
+
+Here `CustomerService` is your `Ocelot.CustomerApi` it is actually [http://localhost:35045/api/values](http://localhost:35045/api/values "Gate Way URL") ,But you are using `http://localhost:35045` as `CustomerService`
