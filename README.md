@@ -1,6 +1,12 @@
 ![0001_banner](https://user-images.githubusercontent.com/21302583/61870371-9026d880-aefb-11e9-8c92-42eb413692de.png)
 # Ocelot
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_Ocelot-Gateway-Sample&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_Ocelot-Gateway-Sample)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_Ocelot-Gateway-Sample&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_Ocelot-Gateway-Sample)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_Ocelot-Gateway-Sample&metric=bugs)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_Ocelot-Gateway-Sample)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_Ocelot-Gateway-Sample&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_Ocelot-Gateway-Sample)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_Ocelot-Gateway-Sample&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_Ocelot-Gateway-Sample)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_Ocelot-Gateway-Sample&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_Ocelot-Gateway-Sample)
 [![Build status](https://ci.appveyor.com/api/projects/status/lyhgbhdhqyepj6xi/branch/master?svg=true)](https://ci.appveyor.com/project/Mahadenamuththa/apigatewayocelot/branch/master)
 
 [![Build history](https://buildstats.info/appveyor/chart/Mahadenamuththa/apigatewayocelot)](https://ci.appveyor.com/project/Mahadenamuththa/apigatewayocelot/history)
